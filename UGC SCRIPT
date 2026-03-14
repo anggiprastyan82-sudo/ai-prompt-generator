@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>UGC Content Generator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Inter,Arial;
+background:#f5f6fa;
+margin:0;
+padding:40px;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#777;
+margin-bottom:30px;
+}
+
+input,select{
+width:80%;
+padding:14px;
+border-radius:10px;
+border:1px solid #ddd;
+margin:10px 0;
+font-size:16px;
+}
+
+button{
+background:#5b5cf6;
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+.result{
+margin-top:30px;
+background:#f3f4f6;
+padding:20px;
+border-radius:10px;
+text-align:left;
+}
+
+.copy{
+background:#10b981;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>UGC Hook Generator</h1>
+
+<p class="subtitle">Generate viral UGC hooks for TikTok, Reels, and ads</p>
+
+<input id="product" placeholder="Enter product (example: gaming mouse)">
+
+<br>
+
+<select id="platform">
+<option>TikTok</option>
+<option>Instagram Reels</option>
+<option>YouTube Shorts</option>
+<option>Facebook Ads</option>
+</select>
+
+<br>
+
+<button onclick="generate()">Generate Hooks</button>
+
+<div class="result" id="output"></div>
+
+<button class="copy" onclick="copyText()">Copy Hooks</button>
+
+</div>
+
+<script>
+
+function generate(){
+
+let product=document.getElementById("product").value
+let platform=document.getElementById("platform").value
+
+let hooks=[
+
+"POV: you finally found the best "+product,
+
+"I didn't expect this "+product+" to be THIS good",
+
+"Stop scrolling if you need a better "+product,
+
+"This "+product+" changed my setup completely",
+
+"Nobody told me this "+product+" was this powerful",
+
+"Testing a viral "+product+" from TikTok",
+
+"3 reasons why this "+product+" is worth it",
+
+"Watch this before buying a "+product,
+
+"Best "+product+" under $50",
+
+"Is this the best "+product+" ever?"
+
+]
+
+let html=""
+
+hooks.forEach(function(h){
+
+html+="• "+h+"<br><br>"
+
+})
+
+document.getElementById("output").innerHTML=html
+
+}
+
+function copyText(){
+
+let text=document.getElementById("output").innerText
+
+navigator.clipboard.writeText(text)
+
+alert("Hooks copied!")
+
+}
+
+</script>
+
+</body>
+</html>

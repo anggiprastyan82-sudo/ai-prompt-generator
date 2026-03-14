@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Prompt Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+font-family:Arial;
+background:#f3f4f6;
+text-align:center;
+padding:40px;
+}
+
+.box{
+background:white;
+max-width:600px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+input,select{
+padding:10px;
+width:80%;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:#4CAF50;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+textarea{
+width:80%;
+height:120px;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>AI Image Prompt Generator</h2>
+
+<input id="idea" placeholder="Enter idea example: dragon">
+
+<br>
+
+<select id="style">
+<option>Anime</option>
+<option>Realistic</option>
+<option>Fantasy</option>
+<option>Cyberpunk</option>
+</select>
+
+<br>
+
+<button onclick="generate()">Generate Prompt</button>
+
+<h3>Result</h3>
+
+<textarea id="result"></textarea>
+
+</div>
+
+<script>
+
+function generate(){
+
+let idea=document.getElementById("idea").value
+let style=document.getElementById("style").value
+
+let prompt=style+" "+idea+", ultra detailed, cinematic lighting, masterpiece, 4k"
+
+document.getElementById("result").value=prompt
+
+}
+
+</script>
+
+</body>
+  </html>

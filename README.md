@@ -19,13 +19,16 @@ tailwind.config.ts # Konfigurasi Tailwind CSS
 2. Pasang dependensi: `npm install`
 3. Mulai server pengembangan: `npm run dev`
 4. Buka [http://localhost:3000](http://localhost:3000) di browser.
+5. Untuk memverifikasi build produksi sebelum deploy, jalankan: `npm run build`.
 
 ## Deploy ke Vercel
 
 1. Upload repository ini ke GitHub.
 2. Buka [Vercel](https://vercel.com/new) dan pilih **Add New Project**.
 3. Impor repository GitHub tersebut.
-4. Vercel akan mendeteksi Next.js secara otomatis. Biarkan build command `npm run build`.
+4. Vercel akan mendeteksi Next.js secara otomatis. Biarkan build command `npm run build` dan install command `npm install`.
 5. Klik **Deploy**.
+
+Konfigurasi TypeScript dan paket type definitions sudah disertakan sebagai `devDependencies`, sehingga tahap type-check Next.js dapat berjalan di Vercel tanpa memasang paket tambahan saat build.
 
 Tidak ada database, integrasi AI, maupun Google Sheets pada versi awal ini. Seluruh status agent dan aktivitas merupakan data dummy di `app/page.tsx`.

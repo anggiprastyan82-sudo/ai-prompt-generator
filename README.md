@@ -15,7 +15,7 @@ tailwind.config.ts # Konfigurasi Tailwind CSS
 
 ## Menjalankan secara lokal
 
-1. Pastikan Node.js 18.17 atau lebih baru sudah terpasang.
+1. Gunakan Node.js 20. Versi ini dikunci di `.nvmrc` dan `package.json` agar lingkungan lokal dan Vercel memakai runtime yang sama.
 2. Pasang dependensi: `npm install`
 3. Mulai server pengembangan: `npm run dev`
 4. Buka [http://localhost:3000](http://localhost:3000) di browser.
@@ -26,7 +26,7 @@ tailwind.config.ts # Konfigurasi Tailwind CSS
 1. Upload repository ini ke GitHub.
 2. Buka [Vercel](https://vercel.com/new) dan pilih **Add New Project**.
 3. Impor repository GitHub tersebut.
-4. Vercel akan mendeteksi Next.js secara otomatis. Biarkan build command `npm run build` dan install command `npm install`.
+4. Vercel akan mendeteksi Next.js secara otomatis. Repository ini juga menyediakan `vercel.json` dengan install command `npm install` dan build command `npm run build`.
 5. Klik **Deploy**.
 
 Konfigurasi TypeScript dan paket type definitions sudah disertakan sebagai `devDependencies`, sehingga tahap type-check Next.js dapat berjalan di Vercel tanpa memasang paket tambahan saat build.
